@@ -1,0 +1,286 @@
+:root {
+  --color-primary: #ffffff;
+  --color-secondary: #f1f2f6;
+  --color-opacity: #a4a4ac;
+  --color-avatar: #7ae0e4;
+  --color-live: #30bc37;
+  --color-heading: #555;
+  --color-border: #ccc;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background: var(--color-secondary);
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.flex-1 {
+  display: flex;
+  gap: 2rem;
+}
+.flex-2 {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  overflow-x: hidden;
+}
+/*Navbar*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-primary);
+  padding: 0 3rem;
+}
+
+.brand {
+  font-size: 2rem;
+}
+
+.nav__text {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.navbar__centre {
+  display: inline-flex;
+  margin-left: 15rem;
+}
+
+.avatar {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: var(--color-avatar);
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.live {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: green;
+  right: 51px;
+  top: 15px;
+}
+
+.fa-chevron-down {
+  font-size: 1.4rem;
+  margin-top: 0;
+  padding-left: 0.7rem;
+}
+
+/*Sidebar*/
+.sidebar {
+  background: var(--color-primary);
+  padding-left: 2.1rem;
+  /*padding-right: 13rem;*/
+
+  width: 280px;
+  height: ;
+  margin-top: 0.2rem;
+}
+.sidebar__list {
+  padding-top: 6rem;
+  color: var(--color-opacity);
+}
+
+.sidebar__list h2 {
+  padding-left: 1.6rem;
+  font-size: 1.7rem;
+}
+
+.sidebar__list .fas {
+  font-size: 1.9rem;
+}
+.sidebar__item {
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+.sidebar__item:hover {
+  background: var(--color-shadow);
+}
+
+/*form*/
+.form-1 {
+  background: var(--color-primary);
+  margin: 0.9rem 1.5rem;
+  border-radius: 30px;
+  padding: 0 1rem;
+}
+.lead {
+  font-size: 1.8rem;
+  color: var(--color-heading);
+}
+
+.lead__text {
+  color: var(--color-heading);
+  font-weight: 600;
+  margin: 0.5rem;
+}
+
+select {
+  padding: 1rem 1rem;
+  outline: 0;
+  border: 1px solid var(--color-heading);
+  font-size: 1rem;
+  color: var(--color-heading);
+}
+
+.group-selector {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  display: flex;
+}
+
+.group--width-1 {
+  width: 490px;
+}
+.group--width-2 {
+  width: 1000px;
+}
+.group--width-3 {
+  width: 320px;
+}
+.group--width-4 {
+  width: 500px;
+}
+
+.group-selector select {
+  border: 0;
+  flex-grow: 1;
+}
+
+/* input */
+input {
+  padding: 1rem 1rem;
+  outline: 0;
+  border: 1px solid var(--color-heading);
+  font-size: 1rem;
+  color: var(--color-heading);
+  border-radius: 6px;
+}
+
+.group-selector input {
+  border: 0;
+  flex-grow: 1;
+}
+
+.mb {
+  margin-bottom: 1rem;
+}
+
+.lead-2 {
+  font-weight: 600;
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+.event {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (max-width: 1180px) {
+  /*Sidebar*/
+  .sidebar__list h2 {
+    padding-left: 1.6rem;
+    font-size: 1.5rem;
+  }
+  /*form*/
+  .group--width-1 {
+    width: 350px;
+  }
+  .group--width-2 {
+    width: 700px;
+  }
+  .group--width-3 {
+    width: 180px;
+  }
+}
+
+@media (max-width: 900px) {
+  /*Navbar*/
+  .nav__text {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .navbar__centre {
+    margin-left: 5rem;
+  }
+  /*Sidebar*/
+  .sidebar {
+    padding-left: 2.1rem;
+    width: 200px;
+  }
+
+  /*form*/
+  .form__info {
+    display: flex;
+    flex-direction: column;
+  }
+  .form__info:nth-child(11) {
+    display: flex;
+    flex-direction: row;
+  }
+  .form__info:nth-child(12) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .group--width-1,
+  .group--width-2,
+  .group--width-3 {
+    width: auto;
+  }
+}
+
+@media (max-width: 736px) {
+  .menu {
+    align-items: center;
+    justify-content: center;
+  }
+  /*Sidebar*/
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 566px) {
+  body {
+    overflow: hidden;
+  }
+  .navbar__centre {
+    display: none;
+  }
+  .menu {
+    align-items: center;
+    justify-content: center;
+  }
+  /*form*/
+  .form-1 {
+    width: 300px;
+  }
+  .group--width-1,
+  .group--width-2,
+  .group--width-3 {
+    width: 300px;
+  }
+}
